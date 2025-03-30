@@ -3,9 +3,9 @@ description: |
   環境変数と githubコンテキストをログへ表示します。
   ワークフローのデバッグに便利です。
 inputs:
-  enable_context:
+  enable-context:
     default: 'true'
-    require: false
+    required: false
     description: コンテキストに出力するか
 outputs:
   dumped-date:
@@ -24,4 +24,3 @@ runs:
     - id current
       run: echo "date=$(date)" >> "${GITHUB_OUTPUT}"
       shell: bash
-
